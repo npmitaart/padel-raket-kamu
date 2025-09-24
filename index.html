@@ -3,202 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padel Raket Kamu - Jual Raket Padel Baru & Bekas Berkualitas</title>
+    <title>PadelPro - Jual Raket Padel Terbaik</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6',
+                    }
+                }
+            }
         }
-        .whatsapp-btn {
-            transition: all 0.3s ease;
-        }
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .racket-card {
-            transition: all 0.3s ease;
-        }
-        .racket-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    </script>
 </head>
-<body class="font-sans bg-gray-50">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <i data-feather="activity" class="text-blue-500 mr-2"></i>
-                <span class="text-xl font-bold text-gray-800">Padel Raket Kamu</span>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">
+                        🎾 PadelPro
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium">Produk</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">Tentang</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Kontak</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="waButton" class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        WhatsApp
+                    </button>
+                    
+                    <button id="menuButton" class="md:hidden p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#why" class="text-gray-600 hover:text-blue-500">Kenapa Padel?</a>
-                <a href="#products" class="text-gray-600 hover:text-blue-500">Produk Kami</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-500">Tentang Kami</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-500">Kontak</a>
-            </div>
-            <button class="md:hidden focus:outline-none" id="menu-toggle">
-                <i data-feather="menu"></i>
-            </button>
         </div>
+
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white w-full px-4 py-2" id="mobile-menu">
-            <a href="#why" class="block py-2 text-gray-600 hover:text-blue-500">Kenapa Padel?</a>
-            <a href="#products" class="block py-2 text-gray-600 hover:text-blue-500">Produk Kami</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-500">Tentang Kami</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-500">Kontak</a>
+        <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium">Produk</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">Tentang</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Kontak</a>
+                </div>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient py-20">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Solusi Raket Padel Berkualitas dengan Harga Terbaik</h1>
-                <p class="text-lg text-gray-600 mb-6">Kami menyediakan berbagai raket padel baru dan bekas berkualitas untuk mendukung performa permainan Anda. Dapatkan produk terbaik dengan harga kompetitif.</p>
-                <div class="flex space-x-4">
-                    <a href="#products" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium">Lihat Produk</a>
-                    <a href="https://wa.me/6282248069914" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium flex items-center">
-                        <i data-feather="message-circle" class="mr-2"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2" data-aos="fade-left">
-                <img src="http://static.photos/sport/640x360/13" alt="Padel Racket Collection" class="rounded-lg shadow-xl w-full">
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Padel Section -->
-    <section id="why" class="py-16 bg-white">
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Kenapa Memilih Olahraga Padel?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg racket-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <i data-feather="users" class="text-blue-500"></i>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Raket Padel Terbaik untuk Permainan Anda
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Temukan koleksi raket padel premium dari merek terkemuka. Kualitas terbaik, harga terjangkau.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="buyNowButton" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Beli Sekarang
+                        </button>
+                        <button id="viewProductsButton" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            Lihat Produk
+                        </button>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Olahraga Sosial</h3>
-                    <p class="text-gray-600">Padel merupakan olahraga yang dapat dimainkan bersama rekan atau keluarga, menciptakan pengalaman bermain yang menyenangkan sekaligus menyehatkan.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg racket-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <i data-feather="activity" class="text-green-500"></i>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://placehold.co/500x400/ffffff/3b82f6?text=Raket+Padel+Premium" alt="Raket Padel" class="rounded-lg shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-black px-3 py-1 rounded-lg font-bold text-sm">
+                            Diskon 20%
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Manfaat Kesehatan</h3>
-                    <p class="text-gray-600">Bermain padel memberikan manfaat kesehatan menyeluruh, melatih sistem kardiovaskular, meningkatkan koordinasi, refleks, serta kemampuan berpikir strategis.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg racket-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                        <i data-feather="trending-up" class="text-purple-500"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tren Olahraga</h3>
-                    <p class="text-gray-600">Padel sedang mengalami pertumbuhan pesat di Indonesia, ditandai dengan pembangunan fasilitas-fasilitas baru di berbagai wilayah.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-16 bg-gray-50">
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">Pilihan Raket Padel Kami</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Kami menyediakan berbagai raket padel berkualitas untuk semua level pemain.</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Kategori Raket</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="category-btn px-6 py-3 rounded-full font-semibold transition-colors bg-blue-600 text-white" data-category="all">
+                    Semua
+                </button>
+                <button class="category-btn px-6 py-3 rounded-full font-semibold transition-colors bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="premium">
+                    Premium
+                </button>
+                <button class="category-btn px-6 py-3 rounded-full font-semibold transition-colors bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="intermediate">
+                    Menengah
+                </button>
+                <button class="category-btn px-6 py-3 rounded-full font-semibold transition-colors bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="beginner">
+                    Pemula
+                </button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md racket-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://padelusa.com/cdn/shop/articles/Comparing_Bullpadel_Vertex_03_and_Vertex_03_Comfort.webp?v=1687550812" alt="Bullpadel Vertex 03" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-800">Bullpadel Vertex 03</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Baru</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Raket premium untuk pemain tingkat lanjut dengan kontrol maksimal.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-gray-800">Rp 2.750.000</span>
-                            <a href="https://wa.me/6282248069914?text=Saya%20tertarik%20dengan%20Bullpadel%20Vertex%2003" class="text-blue-500 hover:text-blue-700 flex items-center">
-                                <i data-feather="shopping-cart" class="mr-1"></i> Pesan
-                            </a>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/1e40af/ffffff?text=Siux+Air+Titan" alt="Siux Air Titan" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
                         </div>
                     </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Siux Air Titan</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Raket padel profesional dengan teknologi carbon fiber terbaik</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.8 (124 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 2.499.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 2.999.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Siux Air Titan">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
                 </div>
-                
+
                 <!-- Product 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md racket-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://preview.redd.it/nox-ml10-pro-cup-cracked-v0-06qpgc6p60ce1.jpeg?width=640&crop=smart&auto=webp&s=e61a0759f654a32f60bc169f9c76a5b784141b6b" alt="Nox ML10 Pro Cup" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-800">Nox ML10 Pro Cup</h3>
-                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Bekas</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Kondisi sangat baik, cocok untuk pemain menengah yang ingin meningkatkan skill.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-gray-800">Rp 1.850.000</span>
-                            <a href="https://wa.me/6282248069914?text=Saya%20tertarik%20dengan%20Nox%20ML10%20Pro%20Cup" class="text-blue-500 hover:text-blue-700 flex items-center">
-                                <i data-feather="shopping-cart" class="mr-1"></i> Pesan
-                            </a>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/dc2626/ffffff?text=Nox+ML10+Pro" alt="Nox ML10 Pro" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
                         </div>
                     </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Nox ML10 Pro</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Raket serba bisa dengan keseimbangan sempurna antara power dan kontrol</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.6 (89 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 1.899.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 2.199.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Nox ML10 Pro">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
                 </div>
-                
+
                 <!-- Product 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md racket-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://www.zonadepadel.com/blog/wp-content/uploads/2023/06/80.jpg" alt="Adidas Metalbone 3.2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-800">Adidas Metalbone 3.2</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Baru</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Raket dengan power besar dan kenyamanan maksimal untuk semua level.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-lg font-bold text-gray-800">Rp 3.200.000</span>
-                            <a href="https://wa.me/6282248069914?text=Saya%20tertarik%20dengan%20Adidas%20Metalbone%203.2" class="text-blue-500 hover:text-blue-700 flex items-center">
-                                <i data-feather="shopping-cart" class="mr-1"></i> Pesan
-                            </a>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/059669/ffffff?text=Head+Graphene" alt="Head Graphene 360+" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
                         </div>
                     </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Head Graphene 360+</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Teknologi Graphene 360+ untuk stabilitas maksimal</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.5 (156 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 1.599.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 1.899.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Head Graphene 360+">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="https://wa.me/6282248069914" class="whatsapp-btn inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
-                    <i data-feather="message-circle" class="mr-2"></i> Tanya Stok Lainnya via WhatsApp
-                </a>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/7c3aed/ffffff?text=Adidas+Adipower" alt="Adidas Adipower" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Adidas Adipower</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Raket ideal untuk pemula dengan kontrol mudah</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.3 (203 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 899.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 1.099.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Adidas Adipower">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/ea580c/ffffff?text=Bullpadel+Vertex" alt="Bullpadel Vertex" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bullpadel Vertex</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Raket premium dengan desain aerodinamis</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.7 (98 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 2.199.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 2.599.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Bullpadel Vertex">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x400/0891b2/ffffff?text=Dunlop+Aerogel" alt="Dunlop Aerogel" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            SALE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dunlop Aerogel</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Teknologi Aerogel untuk dampak maksimal</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">
+                                4.4 (142 ulasan)
+                            </span>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    Rp 1.399.000
+                                </span>
+                                <span class="ml-2 text-sm text-gray-500 line-through">
+                                    Rp 1.699.000
+                                </span>
+                            </div>
+                        </div>
+
+                        <button class="product-wa-btn w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center" data-product="Dunlop Aerogel">
+                            <i class="fas fa-phone mr-2"></i>
+                            Beli via WhatsApp
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <img src="http://static.photos/sport/640x360/14" alt="Padel Racket Close-up" class="rounded-lg shadow-xl w-full">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Tentang PadelPro</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kami adalah toko spesialis raket padel terpercaya di Indonesia dengan pengalaman lebih dari 10 tahun 
+                    dalam menyediakan peralatan padel berkualitas tinggi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Produk Original</h3>
+                    <p class="text-gray-600">
+                        Semua produk kami 100% original dengan garansi resmi dari distributor.
+                    </p>
                 </div>
-                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Tentang Padel Raket Kamu</h2>
-                    <p class="text-gray-600 mb-4">Sebagai spesialis peralatan padel, kami berkomitmen menyediakan produk-produk berkualitas dengan harga yang kompetitif.</p>
-                    <p class="text-gray-600 mb-4">Didukung pengalaman lebih dari 5 tahun di industri ini, kami memahami berbagai kebutuhan pemain dari berbagai tingkatan keahlian.</p>
-                    <p class="text-gray-600 mb-6">Setiap produk yang kami tawarkan telah melalui proses seleksi ketat untuk menjamin kualitas dan performa optimal di lapangan.</p>
-                    <div class="flex space-x-4">
-                        <div class="bg-blue-100 p-4 rounded-lg">
-                            <i data-feather="check-circle" class="text-blue-500 mb-2"></i>
-                            <h3 class="font-semibold text-gray-800">Garansi Kualitas</h3>
+
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kualitas Terbaik</h3>
+                    <p class="text-gray-600">
+                        Kami hanya menjual produk dari merek-merek terkemuka dengan kualitas terjamin.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Layanan 24/7</h3>
+                    <p class="text-gray-600">
+                        Tim customer service kami siap membantu Anda kapan saja dengan layanan terbaik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Pelanggan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Raket yang saya beli di PadelPro sangat berkualitas tinggi. Performanya luar biasa dan 
+                        pelayanan pelanggan sangat ramah dan profesional."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Andi Prasetyo</h4>
+                            <p class="text-gray-500 text-sm">Pemain Padel Profesional</p>
                         </div>
-                        <div class="bg-green-100 p-4 rounded-lg">
-                            <i data-feather="dollar-sign" class="text-green-500 mb-2"></i>
-                            <h3 class="font-semibold text-gray-800">Harga Terbaik</h3>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Saya sangat puas dengan pelayanan dan kualitas produk. Pengiriman cepat dan raket sesuai dengan deskripsi."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Budi Santoso</h4>
+                            <p class="text-gray-500 text-sm">Pecinta Olahraga</p>
                         </div>
-                        <div class="bg-purple-100 p-4 rounded-lg">
-                            <i data-feather="headphones" class="text-purple-500 mb-2"></i>
-                            <h3 class="font-semibold text-gray-800">Dukungan Purna Jual</h3>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Harga terjangkau dengan kualitas premium. Sangat direkomendasikan untuk pemain padel di semua level."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Citra Dewi</h4>
+                            <p class="text-gray-500 text-sm">Atlet Padel</p>
                         </div>
                     </div>
                 </div>
@@ -207,124 +493,152 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
+    <section id="contact" class="py-16 bg-blue-600 text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">Hubungi Kami</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Punya pertanyaan tentang produk kami? Jangan ragu untuk menghubungi tim kami.</p>
-            
-            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
-                <div class="md:flex">
-                    <div class="md:w-1/2 bg-blue-500 text-white p-8">
-                        <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
-                        <div class="flex items-start mb-4">
-                            <i data-feather="map-pin" class="mr-3 mt-1"></i>
-                            <p>Jl. Padel No. 123, Jakarta Selatan</p>
-                        </div>
-                        <div class="flex items-start mb-4">
-                            <i data-feather="mail" class="mr-3 mt-1"></i>
-                            <p>info@padelraketkamu.com</p>
-                        </div>
-                        <div class="flex items-start">
-                            <i data-feather="phone" class="mr-3 mt-1"></i>
-                            <p>+62 822-4806-9914</p>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Jam Operasional</h3>
-                            <p>Senin - Jumat: 09.00 - 18.00 WIB</p>
-                            <p>Sabtu: 10.00 - 15.00 WIB</p>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-8 flex flex-col items-center justify-center">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Hubungi Kami Sekarang</h3>
-                        <p class="text-gray-600 mb-6 text-center">Untuk pertanyaan atau pemesanan, langsung hubungi kami melalui WhatsApp atau media sosial.</p>
-                        <div class="flex flex-col space-y-4 w-full">
-                            <a href="https://wa.me/6282248069914" class="whatsapp-btn w-full flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
-                                <i data-feather="message-circle" class="mr-2"></i> WhatsApp Kami
-                            </a>
-                            <div class="flex justify-center space-x-4">
-                                <a href="https://facebook.com" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full">
-                                    <i data-feather="facebook"></i>
-                                </a>
-                                <a href="https://instagram.com" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full">
-                                    <i data-feather="instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Hubungi Kami</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto">
+                    Punya pertanyaan atau butuh bantuan? Tim kami siap membantu Anda kapan saja.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <i class="fas fa-phone text-3xl mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Telepon</h3>
+                    <p>+62 21 1234 5678</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-envelope text-3xl mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Email</h3>
+                    <p>info@padelpro.co.id</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-3xl mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Alamat</h3>
+                    <p>Jl. Padel No. 123, Jakarta Selatan</p>
                 </div>
             </div>
-            
+
+            <div class="max-w-2xl mx-auto text-center">
+                <button id="contactWaButton" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center mx-auto">
+                    <i class="fas fa-phone mr-2"></i>
+                    Hubungi via WhatsApp Sekarang
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center">
-                        <i data-feather="activity" class="text-blue-400 mr-2"></i>
-                        <span class="text-xl font-bold">Padel Raket Kamu</span>
-                    </div>
-                    <p class="text-gray-400 mt-2">Solusi terbaik untuk kebutuhan raket padel Anda.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">🎾 PadelPro</div>
+                    <p class="text-gray-400">
+                        Toko spesialis raket padel terbaik di Indonesia dengan produk original dan pelayanan terpercaya.
+                    </p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="https://facebook.com" class="text-gray-400 hover:text-white">
-                        <i data-feather="facebook"></i>
-                    </a>
-                    <a href="https://instagram.com/npmitaart" class="text-gray-400 hover:text-white">
-                        <i data-feather="instagram"></i>
-                    </a>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Produk</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Raket Premium</a></li>
+                        <li><a href="#" class="hover:text-white">Raket Menengah</a></li>
+                        <li><a href="#" class="hover:text-white">Raket Pemula</a></li>
+                        <li><a href="#" class="hover:text-white">Aksesoris</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Layanan</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Garansi Produk</a></li>
+                        <li><a href="#" class="hover:text-white">Pengiriman Cepat</a></li>
+                        <li><a href="#" class="hover:text-white">Konsultasi Gratis</a></li>
+                        <li><a href="#" class="hover:text-white">Retur Mudah</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-700">
+                            <span class="font-bold">f</span>
+                        </div>
+                        <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                            <span class="font-bold">t</span>
+                        </div>
+                        <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-pink-700">
+                            <span class="font-bold">i</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-                <p>&copy; 2025 Padel Raket Kamu. All rights reserved.</p>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PadelPro. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        feather.replace();
-        
         // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('block');
-            } else {
-                menu.classList.add('hidden');
-                menu.classList.remove('block');
-            }
+        document.getElementById('menuButton').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
         });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+
+        // Category filtering
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
                 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                // Add active class to clicked button
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.classList.add('bg-blue-600', 'text-white');
                 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        mobileMenu.classList.remove('block');
-                    }
-                }
+                // In a real implementation, you would filter products here
+            });
+        });
+
+        // WhatsApp functionality
+        function openWhatsApp(message) {
+            const phoneNumber = '6281234567890'; // Ganti dengan nomor WA toko Anda
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        // WhatsApp button event listeners
+        document.getElementById('waButton').addEventListener('click', function() {
+            openWhatsApp('Halo, saya ingin bertanya tentang produk raket padel');
+        });
+
+        document.getElementById('buyNowButton').addEventListener('click', function() {
+            openWhatsApp('Halo, saya tertarik dengan produk raket padel');
+        });
+
+        document.getElementById('viewProductsButton').addEventListener('click', function() {
+            document.getElementById('products').scrollIntoView({behavior: 'smooth'});
+        });
+
+        document.getElementById('contactWaButton').addEventListener('click', function() {
+            openWhatsApp('Halo, saya ingin bertanya tentang produk dan layanan PadelPro');
+        });
+
+        // Product WhatsApp buttons
+        const productWaButtons = document.querySelectorAll('.product-wa-btn');
+        productWaButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                openWhatsApp(`Halo, saya tertarik dengan raket ${productName}`);
             });
         });
     </script>
